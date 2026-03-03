@@ -250,3 +250,23 @@ B.Tech – Computer Science
 
 Focus: AI + Cybersecurity Systems
 
+
+
+---
+
+
+
+\## 📸 Project Screenshots
+
+
+
+\### 🖥️ Dashboard Overview
+
+!\[Dashboard](Screenshots/dashboard.png)
+
+
+
+\### 📊 Threat Analytics Panel
+
+!\[Analytics](Screenshots/analytics.png)
+

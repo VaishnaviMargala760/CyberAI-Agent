@@ -1,0 +1,166 @@
+* { box-sizing: border-box; }
+
+.page {
+  min-height: 100vh;
+  padding: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.brand { display: flex; gap: 12px; align-items: center; }
+.logo {
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-weight: 800;
+}
+
+.brandTitle { font-weight: 800; font-size: 18px; }
+.brandSub { color: #666; font-size: 13px; }
+
+.btnRow { display: flex; gap: 10px; flex-wrap: wrap; }
+button {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+button.ghost { background: #fafafa; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.cardTitle { font-weight: 900; }
+.cardRight { display: flex; gap: 10px; }
+
+.cardBody { color: #111; }
+
+pre {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 12px;
+  overflow: auto;
+  margin: 0;
+  border: 1px solid #eee;
+  font-size: 12px;
+}
+
+.row { display: flex; gap: 10px; margin: 6px 0; }
+.label { width: 120px; color: #555; font-weight: 800; }
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  font-weight: 900;
+  font-size: 12px;
+}
+.low { }
+.medium { }
+.high { }
+.critical { }
+
+.center { padding: 20px; text-align: center; color: #555; }
+.hint { margin-top: 10px; color: #666; font-size: 12px; }
+.miniTitle { margin: 12px 0 8px; font-weight: 900; color: #333; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.fieldLabel { font-size: 12px; color: #555; font-weight: 800; margin-bottom: 6px; }
+input {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+input:focus { border-color: #bbb; }
+
+.presetRow { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.logTableWrap {
+  overflow: auto;
+  max-height: 320px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+.logTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.logTable th, .logTable td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  vertical-align: top;
+}
+.logTable th {
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  z-index: 1;
+}
+
+/* ----- charts ----- */
+.chartWrap {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fafafa;
+}
+.chartMeta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #666;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.barList { display: flex; flex-direction: column; gap: 10px; }
+.barRow { display: grid; grid-template-columns: 120px 1fr 40px; gap: 10px; align-items: center; }
+.barTrack { height: 12px; border-radius: 999px; background: #f0f0f0; overflow: hidden; border: 1px solid #eee; }
+.barFill { height: 100%; background: #222; border-radius: 999px; }
+.barNum { text-align: right; font-weight: 800; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .label { width: 110px; }
+  .formGrid { grid-template-columns: 1fr; }
+  .barRow { grid-template-columns: 110px 1fr 40px; }
+}
